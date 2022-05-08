@@ -52,6 +52,7 @@
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(432, 24);
             this.txtURL.TabIndex = 1;
+            this.txtURL.Text = "http://uit.edu.vn";
             this.txtURL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtURL_KeyDown);
             // 
             // txtFileName
@@ -61,6 +62,7 @@
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(432, 24);
             this.txtFileName.TabIndex = 2;
+            this.txtFileName.Text = "uit.html";
             // 
             // rtxtContents
             // 

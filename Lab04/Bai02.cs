@@ -11,8 +11,6 @@ namespace Lab04
         public Bai02()
         {
             InitializeComponent();
-            // Default
-            txtURL.Text = @"http://www.contoso.com/PostAccepter.aspx";
         }
 
         private string Post(string url, string data)

@@ -52,6 +52,7 @@
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(402, 24);
             this.txtURL.TabIndex = 1;
+            this.txtURL.Text = "http://www.contoso.com/PostAccepter.aspx";
             this.txtURL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtURL_KeyDown);
             // 
             // txtData
@@ -61,6 +62,7 @@
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(402, 24);
             this.txtData.TabIndex = 2;
+            this.txtData.Text = "NT106";
             // 
             // rtxtContents
             // 

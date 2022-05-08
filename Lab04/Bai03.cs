@@ -38,6 +38,9 @@ namespace Lab04
         {
             rtxtContents.Clear();
 
+            if (txtFileName.Text.Trim().Equals(string.Empty))
+                txtFileName.Text = @"default.html";
+
             try
             {
                 if (!txtURL.Text.StartsWith("http://"))
