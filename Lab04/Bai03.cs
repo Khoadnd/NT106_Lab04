@@ -18,7 +18,7 @@ namespace Lab04
         {
             InitializeComponent();
             // Default
-            txtUrl.Text = @"http://uit.edu.vn";
+            txtURL.Text = @"http://uit.edu.vn";
             txtFileName.Text = @"uit.html";
         }
 
@@ -40,12 +40,21 @@ namespace Lab04
 
             try
             {
-                rtxtContents.AppendText(Download(txtUrl.Text.Trim(), txtFileName.Text.Trim()));
+                if (!txtURL.Text.StartsWith("http://"))
+                    txtURL.Text = txtURL.Text.Insert(0, "http://");
+
+                rtxtContents.AppendText(Download(txtURL.Text.Trim(), txtFileName.Text.Trim()));
             }
             catch (Exception ex)
             {
                 rtxtContents.AppendText(ex.Message);
             }
+        }
+
+        private void txtURL_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnDownload.PerformClick();
         }
     }
 }

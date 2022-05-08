@@ -42,8 +42,7 @@ namespace Lab04
         private void ChildFormClosedHandler(object sender, FormClosedEventArgs e)
         {
             Show();
+            GC.Collect();
         }
-
-
     }
 }

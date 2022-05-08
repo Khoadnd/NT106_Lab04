@@ -41,10 +41,19 @@ namespace Lab04
             rtxtContents.Clear();
             try
             {
+                if (!txtURL.Text.StartsWith("http://"))
+                    txtURL.Text = txtURL.Text.Insert(0, "http://");
+
                 rtxtContents.AppendText(Post(txtURL.Text.Trim(), txtData.Text.Trim()));
             }
             catch (Exception ex)
             { rtxtContents.AppendText(ex.Message); }
+        }
+
+        private void txtURL_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnPOST.PerformClick();
         }
     }
 }

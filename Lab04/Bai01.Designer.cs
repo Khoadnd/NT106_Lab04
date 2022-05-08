@@ -40,6 +40,7 @@
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(476, 24);
             this.txtURL.TabIndex = 0;
+            this.txtURL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtURL_KeyDown);
             // 
             // rtxtContents
             // 

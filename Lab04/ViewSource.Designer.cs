@@ -50,6 +50,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ViewSource";
             this.Text = "ViewSource";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewSource_FormClosed);
             this.ResumeLayout(false);
 
         }

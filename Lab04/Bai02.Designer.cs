@@ -52,6 +52,7 @@
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(402, 24);
             this.txtURL.TabIndex = 1;
+            this.txtURL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtURL_KeyDown);
             // 
             // txtData
             // 

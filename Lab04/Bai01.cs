@@ -25,12 +25,22 @@ namespace Lab04
         private void btnGet_Click(object sender, EventArgs e)
         {
             rtxtContents.Clear();
+
             try
             {
+                if (!txtURL.Text.StartsWith("http://"))
+                    txtURL.Text = txtURL.Text.Insert(0, "http://");
+
                 rtxtContents.AppendText(GetHTML(txtURL.Text.Trim()));
             }
             catch (Exception ex)
             { rtxtContents.AppendText(ex.Message); }
+        }
+
+        private void txtURL_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnGet.PerformClick();
         }
     }
 }

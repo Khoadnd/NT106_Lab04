@@ -17,5 +17,10 @@ namespace Lab04
             InitializeComponent();
             rtxtSource.Text = data;
         }
+
+        private void ViewSource_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
+        }
     }
 }

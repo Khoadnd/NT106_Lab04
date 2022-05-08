@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnDownload = new System.Windows.Forms.Button();
-            this.txtUrl = new System.Windows.Forms.TextBox();
+            this.txtURL = new System.Windows.Forms.TextBox();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.rtxtContents = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
@@ -45,13 +45,14 @@
             this.btnDownload.UseVisualStyleBackColor = true;
             this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
-            // txtUrl
+            // txtURL
             // 
-            this.txtUrl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.txtUrl.Location = new System.Drawing.Point(12, 12);
-            this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(432, 24);
-            this.txtUrl.TabIndex = 1;
+            this.txtURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.txtURL.Location = new System.Drawing.Point(12, 12);
+            this.txtURL.Name = "txtURL";
+            this.txtURL.Size = new System.Drawing.Size(432, 24);
+            this.txtURL.TabIndex = 1;
+            this.txtURL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtURL_KeyDown);
             // 
             // txtFileName
             // 
@@ -77,7 +78,7 @@
             this.ClientSize = new System.Drawing.Size(537, 433);
             this.Controls.Add(this.rtxtContents);
             this.Controls.Add(this.txtFileName);
-            this.Controls.Add(this.txtUrl);
+            this.Controls.Add(this.txtURL);
             this.Controls.Add(this.btnDownload);
             this.Name = "Bai03";
             this.Text = "Bai03";
@@ -89,7 +90,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnDownload;
-        private System.Windows.Forms.TextBox txtUrl;
+        private System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.RichTextBox rtxtContents;
     }
